@@ -31,7 +31,7 @@ void parpadeo(struct pt *pt) {
     
     digitalWrite(10, LOW);
     t = millis();
-    PT_WAIT_WHILE(pt, (millis()-t)<1000);
+    PT_WAIT_UNTIL(pt, (millis()-t)>=1000);
   // }
   } while(true);
   PT_END(pt);
@@ -52,7 +52,7 @@ void parpadeo2(struct pt *pt) {
     
     digitalWrite(9, LOW);
     t = millis();
-    PT_WAIT_WHILE(pt, (millis()-t)<500);
+    PT_WAIT_UNTIL(pt, (millis()-t)>=1000);
   // }
   } while(true);
   PT_END(pt);
@@ -73,7 +73,7 @@ void parpadeo3(struct pt *pt) {
     
     digitalWrite(8, LOW);
     t = millis();
-    PT_WAIT_WHILE(pt, (millis()-t)<250);
+    PT_WAIT_UNTIL(pt, (millis()-t)>=1000);
   // }
   } while(true);
   PT_END(pt);
